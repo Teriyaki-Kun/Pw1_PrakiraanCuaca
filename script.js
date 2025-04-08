@@ -19,7 +19,7 @@ fetch(`https://api.bmkg.go.id/publik/prakiraan-cuaca?adm4=${kode}`)
     data.data[0].cuaca.forEach( (item) =>{
         console.log(item);
         item.forEach((cuaca) => {
-            document.getElementById("list-cuaca").innerHTML += `<li>${cuaca.weather_desc}</li>`
+            document.getElementById("list-cuaca").innerHTML += `<li>${cuaca.weather_desc} ${cuaca.utc_datetime}</li>`
 
         })
         
