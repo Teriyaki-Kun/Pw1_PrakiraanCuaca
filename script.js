@@ -1,3 +1,26 @@
+fetch('https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json')
+.then(Response => Response.json())
+.then(data => {
+    console.log(data);
+    console.log(data.Infogempa.gempa);
+        data.Infogempa.gempa.forEach((data)=>{
+            document.getElementById('gempa').innerHTML += `<li class="list-group-item">
+            ${data.Wilayah} ${data.Tanggal}${data.Jam}${data.Potensi} </li>`
+        }) 
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 fetch("https://24252-if21-pw1-omega.vercel.app/javascript/wilayah.json")
 .then(response=> response.json())
 .then(data => {console.log(data);
@@ -30,8 +53,7 @@ fetch(`https://api.bmkg.go.id/publik/prakiraan-cuaca?adm4=${kode}`)
                 </div>
                 </div>
                 </div>
-                </div>
-                `
+                </div>`
                 
             
 
