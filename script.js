@@ -11,16 +11,6 @@ fetch('https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json')
 
 
 
-
-
-
-
-
-
-
-
-
-
 fetch("https://24252-if21-pw1-omega.vercel.app/javascript/wilayah.json")
 .then(response=> response.json())
 .then(data => {console.log(data);
